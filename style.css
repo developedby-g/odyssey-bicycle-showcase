@@ -1,0 +1,616 @@
+@font-face {
+  font-family: "Pilat Extended";
+  src: local("Pilat Extended Regular"), local("Pilat-Extended-Regular"),
+    url("/fonts/PilatExtended-Regular.woff2") format("woff2"),
+    url("/fonts/PilatExtended-Regular.woff") format("woff"),
+    url("/fonts/PilatExtended-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pilat Extended";
+  src: local("Pilat Extended Heavy"), local("Pilat-Extended-Heavy"),
+    url("/fonts/PilatExtended-Heavy.woff2") format("woff2"),
+    url("/fonts/PilatExtended-Heavy.woff") format("woff"),
+    url("/fonts/PilatExtended-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+  
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100px;
+  font-family: "Pilat Extended";
+  background: linear-gradient(
+    180deg,
+    rgba(2, 3, 5, 0.74) 35.66%,
+    rgba(2, 3, 5, 0) 100%
+  );
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#nav-list {
+  display: flex;
+  list-style-type: none;
+  margin-right: 140px;
+  position: relative;
+}
+#branding-container {
+  display: flex;
+  margin-left: 100px;
+}
+#branding {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+}
+#brand-name {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+#product {
+  text-transform: uppercase;
+  color: #51e8ef;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+}
+#nav-list li {
+  margin-left: 80px;
+  font-size: 15px;
+  transition: all 0.6s ease-in-out;
+}
+#nav-list li a {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 0.15em;
+}
+
+#nav-list li  :hover{
+   color: #51e8ef;
+}
+
+#hidden-right-section {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: black;
+  color: white;
+  width: 60vw;
+  height: 100vh;
+  font-family: "Pilat Extended", sans-serif;
+}
+#hidden-top-content {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+#hidden-top-content h2 {
+  font-size: 25px;
+  letter-spacing: 0.15em;
+  padding: 100px 0px 0px 50px;
+}
+#hidden-top-content h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #51e8ef;
+  letter-spacing: 0.2em;
+  margin: 0px 0px 0px 50px;
+}
+#para-content {
+  display: flex;
+  font-size: 12px;
+  margin: 20px 0px 0px 50px;
+}
+
+#down-btn{
+
+   height:60px;
+   width:60px;
+   border-radius: 50%;
+   background-color:white;
+   position: absolute;
+   top:120px;
+   left:800px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+}
+#down-btn:hover{
+  animation: heartbeat 1.5s ease-in-out infinite both;
+}
+/* #para-content p::after{
+   content:"";
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   background-color: rgb(0, 0, 0);
+} */
+
+
+#hidden-bottom {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+   transform: translateY(60%); 
+}
+#bottom-img {
+  width: 100%;
+  height: 100%;
+}
+#bottom-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#play-btn-container {
+  position: absolute;
+  top: 200px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+}
+#play-btn-container span {
+  text-transform: uppercase;
+  font-size: 10px;
+  margin-left: 40px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+}
+#play-btn {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #51e8ef;
+  box-sizing: border-box;
+  transition: all 0.6s ease-in-out;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+#play-btn svg {
+  
+  transition: all 0.6s ease-in-out;
+}
+#play-btn:hover {
+  border: 32px solid #51e8ef;
+}
+#play-btn:hover svg path {
+  fill: black;
+}
+
+#play-btn:hover {
+  background-color: #51e8ef;
+}
+#main-img-section {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  
+}
+#main-img-container {
+  width: 100%;
+  height: 100%;
+}
+#main-img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#hero-section {
+  position: absolute;
+  top: 300px;
+  left: 100px;
+  color: white;
+  width: 40%;
+  height: 40%;
+  font-family: "Pilat Extended", sans-serif;
+}
+#hero-content h2 {
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+#hero-content h1 {
+  font-size: 65px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #51e8ef;
+}
+#hero-content p {
+  font-size: 12px;
+  width: 70%;
+  margin-top: 20px;
+  line-height: 20px;
+}
+#buy-button {
+  height: 40px;
+  width: 150px;
+  margin-top: 20px;
+  border-radius: 20px;
+  position: relative;
+  border: 2px solid #51e8ef;
+}
+
+
+#buy-button span {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#cta-btn-section {
+  height: 70vh;
+  width: 50vw;
+  position: absolute;
+  background-color: transparent;
+  top: 100px;
+  left: 550px;
+
+}
+#cta-btn-wrapper{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.btn-container{
+  height:80px;
+  width:280px;
+  background-color:rgba(0, 0, 0,0.50);
+  border-radius:50px;
+  position:absolute;
+ overflow:hidden;
+ transition: all 0.3s ease-in-out;
+}
+.btn-wrapper{
+    height:100%;
+    width: 100%;
+    position:relative;
+}
+.btn-text-container{
+  width:100%;
+  height:fit-content;
+  position:absolute;
+  left:80px;
+  top:50%;
+transform:translate(0,-50%);
+display:flex;
+flex-direction:column;
+}
+.btn-container:not(:hover)
+{
+    width:80px;
+}
+.btn-container:hover .svg-box svg path  {
+   color:#51ef88;
+}
+.svg-box{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:20px;
+}
+.btn-text-container span{
+  color: aliceblue;
+  width: 100%;
+  white-space: nowrap;
+  font-family: "Pilat Extended", sans-serif;
+ 
+}
+.part {
+  font-size: 10px;
+}
+.company {
+  text-transform: uppercase;
+  font-size: 10px;
+}
+#btn1-container{
+  top: 355px;
+  left: 90px;
+}
+
+#btn2-container {
+  top: 100px;
+  left: 180px;
+}
+#btn3-container {
+  top: 250px;
+  left: 330px;
+}
+#btn4-container {
+  top: 0px;
+  left: 420px;
+}
+#btn5-container {
+  top: 200px;
+  left: 600px;
+}
+
+/* #cta-btn-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.cta-btn {
+  height: 75px;
+  width: 280px;
+  border-radius: 37.5px;
+  background-color: rgba(0, 0, 0, 0.43);
+  position: absolute;
+  transition: all 0.1s ease-in-out;
+}
+.cta-btn {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.cta-btn span {
+  color: aliceblue;
+  margin-left: 80px;
+  width: 100%;
+  white-space: nowrap;
+  font-family: "Pilat Extended", sans-serif;
+}
+.part {
+  font-size: 8px;
+}
+.company {
+  text-transform: uppercase;
+  font-size: 9px;
+  margin: 5px;
+}
+#btn1{
+  top: 355px;
+  left: 90px;
+}
+#btn2 {
+  top: 100px;
+  left: 180px;
+}
+#btn3 {
+  top: 250px;
+  left: 330px;
+}
+#btn4 {
+  top: 0px;
+  left: 420px;
+}
+#btn5 {
+  top: 200px;
+  left: 600px;
+}
+.cta-btn:not(:hover) {
+  width: 75px;
+} */
+#back-container {
+  position: absolute;
+  top: 120px;
+  left: 90%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#back-btn {
+  width: 60px;
+  display: flex;
+  align-items: center;
+}
+#back-container #back-text {
+  text-transform: uppercase;
+  font-family: "Pilat Extende", sans-serif;
+  font-size: 10px;
+  margin-left: -25px;
+  color:#51e8ef;
+  opacity: 0;
+  transition: opacity o.6s ease-in-out;
+  
+}
+#back-container:hover #back-text {
+  opacity: 1;
+}
+#back-btn svg {
+  width: 60px;
+}
+#back-btn svg circle{
+   transition: opacity 0.6s ease-in-out;
+   transition: stroke-dasharray 0.3s ease-in-out;
+   opacity: 0;
+}
+
+#back-btn:hover svg circle{
+    stroke-dasharray: 100 ;
+    opacity: 1;
+}
+#brakes-features-section{
+    height:100vh;
+    width:60vw;
+    background-color:rgb(0, 0, 0);
+    color:white;
+    position:absolute;
+    top:100vh;
+    right:0;
+    font-family: 'Pilat Extended',sans-serif;
+    
+}
+#features-wrapper{
+   height:100%;
+   width:100%;
+   position: relative;
+}
+#bike-img-container img{
+    width:400px;
+    transform: rotate(-26deg);
+}
+#rear-break-feature-container{
+    width:50%;
+    position:absolute;
+    top:100px;
+    left:50px;
+}
+#rear-break-feature-container h1{
+      font-size:40px;
+      font-weight: 300;
+}
+#rear-break-feature-container p{
+   font-size:13px;
+   margin:50px 0px 0px;
+   line-height:20px;
+}
+#bike-img-container{
+   position: absolute;
+   left:470px;
+   top:280px;
+}
+#brake-features{
+    position:absolute;
+    top:480px;
+    left:50px;
+}
+#brake-features span{
+   font-size:15px;
+
+
+}
+#brake-features ul{
+   margin:10px 0px 0px 0px;
+}
+#brake-features ul li{
+   font-size:12px;
+   margin:5px 0px 0px 0px;
+}
+#solid-ring-container{
+   position:absolute;
+   top:493px;
+   left:570px;
+}
+#solid-ring-container svg{
+   width:90px;
+}
+#dashed-ring-container{
+   position:absolute;
+   top:480px;
+   left:560px;
+}
+#dashed-ring-container svg{
+   width:105px;
+}
+#up-btn{
+   height:60px;
+   width:60px;
+   border-radius: 50%;
+   background-color: white;
+   display:grid;
+   place-content:center;
+   position:absolute;
+   top:130px;
+   left:800px;
+}
+
+#up-btn svg{
+  transform: rotate(180deg);
+}
+#up-btn:hover{
+  animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+#pointer-container{
+        height:60px;
+        width:60px;
+        border-radius: 50%;
+        border:1px solid white;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 10;
+        display:grid;
+        place-content: center;
+}
+#pointer-wrapper {
+      width: 100%;
+      height:100%;
+      position:relative;
+
+}
+
+#pointer{
+     position: absolute;
+     top:50%;
+     left:50%;
+      transform: translate(-50%,-50%);
+     height: 15px;
+     width: 15px;
+     background-color: white;
+     border-radius: 50%;
+}
+ 
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+.btn-container .svg-box svg path:hover {
+  fill:#0deffa;
+  opacity:1;
+}
